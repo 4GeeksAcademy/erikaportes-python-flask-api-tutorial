@@ -36,7 +36,7 @@ def add_new_todo():
 @app.route('/todos', methods=['GET'])
 def get_todos():
     if len(todos) == 0:
-        return jsonify({"message": "No hay tareas"}), 200
+        return jsonify({"message": "No hay tareas"}), 400
 
     return jsonify(todos), 200
 
