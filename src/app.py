@@ -11,7 +11,7 @@ def add_new_todo():
 
 @app.route('/todos', methods=['GET'])
 def get_todos():
-    return jsonify(todos)
+    return jsonify(todos), 200
 
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
@@ -25,7 +25,6 @@ todos = [
         'done': True
     },
 ]
-
 
 
 if __name__ == '__main__':
